@@ -23,8 +23,9 @@ pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; f
 #sidebar{
     height: 100%;
     width: 100px;
-    padding: 0 5px;
+    padding: 0 0 0 5px;
     background-color: #eeeeee;
+    position: fixed;
 }
 
 
@@ -42,6 +43,10 @@ pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; f
     text-decoration: none;
 }
 
+.highlight-right{
+    box-shadow: inset -5px -0px #6697e8;
+}
+
 #logo{
     max-width: 100%;
     height: auto;
@@ -50,4 +55,6 @@ pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; f
 
 #content {
     float: right;
+    width: calc(100% - 110px);
+    height: 100%;
 }
