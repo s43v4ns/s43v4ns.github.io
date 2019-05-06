@@ -1,0 +1,53 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+    color: #7AA5D2;
+}
+
+h1 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 24px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 26.4px; color: inherit;} 
+
+h2 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 19px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 19.4px; color: inherit; }
+
+h3 { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 700; line-height: 15.4px; color: inherit; }
+
+p { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 14px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 20px; color: inherit; } 
+
+blockquote { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 21px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 30px; color: inherit; } 
+
+pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; font-style: normal; font-variant: normal; font-weight: 400; line-height: 18.5714px; color: inherit; }
+
+#sidebar{
+    height: 100%;
+    width: 100px;
+    padding: 0 5px;
+    background-color: #eeeeee;
+}
+
+
+.sidebar-button {
+    background-color: inhert;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.sidebar-button a {
+    height: auto;
+}
+
+.sidebar-button h2{
+    text-decoration: none;
+}
+
+#logo{
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+}
+
+#content {
+    float: right;
+}
