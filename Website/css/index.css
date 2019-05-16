@@ -107,6 +107,10 @@ pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; f
     border-radius: 15px;
 } 
 
+.no-background{
+    background: none;
+}
+
 
 .grid-single{
     display: grid;
@@ -199,4 +203,14 @@ pre { font-family: Futura, "Trebuchet MS", Arial, sans-serif; font-size: 13px; f
 
 #qualifications {
     padding: 0 10%;
+}
+
+.CodeMirror{
+    text-align: left;
+}
+
+#hobbies img{
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
 }

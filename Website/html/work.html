@@ -4,13 +4,85 @@
         <title>Portfolio</title>
         <link rel="icon" href="../assets/favicon.png">
         <link rel="stylesheet" href="../css/index.css">
+        <script src="../js/multiple-mirror.js"></script>
+        <script src="../js/codemirror-5.46.0/lib/codemirror.js"></script>
+        <link rel="stylesheet" href="../js/codemirror-5.46.0/lib/codemirror.css"/>
+        <script src="../js/codemirror-5.46.0/mode/css/css.js"></script>
+        <script src="../js/codemirror-5.46.0/mode/clike/clike.js"></script>
+        <script src="../js/codemirror-5.46.0/mode/python/python.js"></script>
+        <script src="../js/codemirror-5.46.0/mode/r/r.js"></script>
     </head>
-    <body>
+    <body onload="loadAllMirrors('mirror-example')">
         <div id="content">
             <div id="A-Level Example" class="work-example">
-                <p></p>
-                <div>
-                    <p></p>
+                <h2>ORPA Online</h2>
+                <h3>Oceanographic Representation and Probability Analysis</h3>
+                <p>Extreme value analysis on an extreme scale. The aim of ORPA was to provide a simple way for performing extreme value analysis for specific locations on large sets of data without the need for complicated spreadsheets.</p>
+                <div class="mirror-example clike">
+                    <div>
+void DeCluster::cluster(){   
+    float cluster_max = 0.0;
+    float cluster_time_start;
+    int i = 0;
+    int index = 0;
+
+    // Loop through the data finding clusters that exceed a certain threshold
+    while (i < data.size()) {
+        if (data[i] > threshold_value) {
+            cluster_time_start = time[i];
+            index = i + 1;
+            cluster_max = data[index];
+            
+            // Loop through the data until a cluster limit either time or magnitude is reached and then find th maxima in this cluster
+            
+            while ((time[index]-cluster_time_start) <= time_cond || data[index] > threshold_value) {
+                if (data[index] >= cluster_max) {
+                    cluster_max = data[index];
+                }
+
+                index++;
+
+                if (index >= data.size()) {
+                    index--;
+                    break;
+                }
+            }
+
+            cluster_maxima.push_back(cluster_max);
+            cluster_max = 0.0;
+            i = index + 1;
+        }
+        else {
+            i++;
+        }
+    }
+}
+                    </div>
+                    <p>A section of the delustering algorithm used in the ORPA project.</p>
+                </div>
+                <div class="mirror-example python">
+                    <div>
+def extractLocation(latitude,longitude):
+
+    root_directory = "D:\Metocean Data\CSIRO Data\database"
+    year = 1979
+    month = 1
+    out_file = outFileHeader(latitude,longitude)
+
+    while year <= 2012:
+        in_file_name = root_directory + '\ww3.glob_24m.%4d%02d.nc' % (year, month)
+        if checkFileExist(in_file_name) == True:
+            #print in_file_name
+            extractor(in_file_name,out_file,latitude,longitude)
+        else:
+            return out_file
+        month += 1
+        if month == 13:
+            month = 1
+            year += 1
+    return out_file.split("\\")[1]
+                    </div>
+                    <p>Snippet of the python script for extracting the MetOcean data from a netCDF4 file.</p>
                 </div>
             </div>
             <div id="swim-teacher" class="prev-job">
